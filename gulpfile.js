@@ -1,9 +1,8 @@
-
- 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var cssmin = require('gulp-cssmin');
+var uglify = require('gulp-uglify');
  
 gulp.task('sass', function () {
   return gulp.src('./src/*.scss')
@@ -11,6 +10,12 @@ gulp.task('sass', function () {
     .pipe(cssmin())
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream())
+});
+
+gulp.task('js', function () {
+  return gulp.src('src/clicker.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
 });
  
 gulp.task('sass:watch', function () {
