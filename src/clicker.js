@@ -6,12 +6,14 @@ var grannysBought = 0;
 
 var granny = {
 	cost: 10,
-	multiple: 4
+	multiple: 4,
+	markup: 10
 };
 
 var farm = {
 	cost: 30,
-	multiple: 70
+	multiple: 70,
+	markup: 20
 }
 
 // Cookie
@@ -24,6 +26,7 @@ document.getElementById("upgradeBtn-granny").addEventListener("click", function(
 });
 
 document.getElementById("upgradeBtn-granny").addEventListener("click", countGrannys);
+
 
 // Farm
 document.getElementById("upgradeBtn-farm").addEventListener("click", function(){
@@ -57,6 +60,8 @@ function countClicks() {
 function upgrade(item) {
 	counter = counter - item.cost;
 	multiple = multiple + item.multiple;
+
+	item.cost = item.cost + item.markup;
 }
 
 function canAfford(item) {
@@ -73,6 +78,10 @@ setInterval(function() {
 
 	document.getElementById("upgradeBtn-farm").disabled = !canAfford(farm);
 
+	document.getElementById("upgradeBtn-granny").innerHTML = "Granny Cost:" + granny.cost;
+
 	document.getElementById("showUpgrade").innerHTML = "Så här många kakor får man i sekunden: " + multiple;
 
 }, 1000)
+
+// gör samma sak med farm knappen som med granny
