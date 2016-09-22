@@ -9,32 +9,39 @@ var grannysBought = 0;
 var farmsBought = 0;
 var minesBought = 0;
 var factorysBought = 0;
+var banksBought = 0;
 
 // Objects
 
 var granny = {
 	cost: 10,
-	multiple: 4,
-	markup: 10
-};
-
-var farm = {
-	cost: 30,
-	multiple: 20,
+	multiple: 2,
 	markup: 20
 };
 
+var farm = {
+	cost: 100,
+	multiple: 5,
+	markup: 40
+};
+
 var mine = {
-	cost: 50,
-	multiple: 30,
-	markup: 30
+	cost: 300,
+	multiple: 15,
+	markup: 60
 };
 
 var factory = {
-	cost: 80,
+	cost: 1000,
+	multiple: 20,
+	markup: 80
+};
+
+var bank = {
+	cost: 3000,
 	multiple: 40,
-	markup: 40
-}
+	markup: 100
+};
 
 
 // Render function
@@ -45,16 +52,19 @@ function render() {
 	printFarms();
 	printMines();
 	printFactorys();
+	printBanks();
 
 	document.getElementById("upgradeBtn-granny").disabled = !canAfford(granny);
 	document.getElementById("upgradeBtn-farm").disabled = !canAfford(farm);
 	document.getElementById("upgradeBtn-mine").disabled = !canAfford(mine);
 	document.getElementById("upgradeBtn-factory").disabled = !canAfford(factory);
+	document.getElementById("upgradeBtn-bank").disabled = !canAfford(bank);
 
 	document.getElementById("upgradeBtn-granny").innerHTML = "Granny Cost: " + granny.cost;
 	document.getElementById("upgradeBtn-farm").innerHTML = "Farm Cost: " + farm.cost;
 	document.getElementById("upgradeBtn-mine").innerHTML = "Mine Cost: " + mine.cost;
 	document.getElementById("upgradeBtn-factory").innerHTML = "Factory Cost: " + factory.cost;
+	document.getElementById("upgradeBtn-bank").innerHTML = "Bank Cost: " + bank.cost;
 
 	document.getElementById("showUpgrade").innerHTML = "Så här många kakor får man i sekunden: " + multiple;
 
@@ -65,6 +75,8 @@ function render() {
 // Cookie clicks
 document.getElementById("myBtn").addEventListener("click", countClicks);
 
+
+/* UPGRADES */
 
 // Grannys
 document.getElementById("upgradeBtn-granny").addEventListener("click", function(){
@@ -99,6 +111,14 @@ document.getElementById("upgradeBtn-factory").addEventListener("click", function
 document.getElementById("upgradeBtn-factory").addEventListener("click", countFactorys);
 document.getElementById("upgradeBtn-factory").disabled = true;
 
+// Bank
+document.getElementById("upgradeBtn-bank").addEventListener("click", function(){
+	upgrade(bank);
+});
+
+document.getElementById("upgradeBtn-bank").addEventListener("click", countBanks);
+document.getElementById("upgradeBtn-bank").disabled = true;
+
 
 
 
@@ -123,6 +143,11 @@ function printMines() {
 function printFactorys() {
 	document.getElementById("showFactorys").innerHTML = "Du har köpt: " + factorysBought + " Factorys!";
 }
+
+function printBanks() {
+	document.getElementById("showBanks").innerHTML = "Du har köpt: " + banksBought + " Banks!";
+}
+
 
 
 function countClicks() {
@@ -165,6 +190,11 @@ function countMines() {
 function countFactorys() {
 	factorysBought++;
 	printFactorys();
+}
+
+function countBanks() {
+	banksBought++;
+	printBanks();
 }
 
 
