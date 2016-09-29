@@ -3,39 +3,65 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Maki clicker</title>
+
+
+
+	<!-- Custom Style Sheet -->
 	<link rel="stylesheet" type="text/css" href="dist/css/cookie.css">
 </head>
 <body>
 
-<!-- Buttons -->
-<img id="maki" src="img/maki.png"/>
+<header>
+	<h2>Hungry?</h2>
+</header>
 
-<img id="neko" src="img/neko.png"/>
-<button id="upgradeBtn-neko"></button>
+<main>
 
-<img id="geisha" src="img/geisha.png"/>
-<button id="upgradeBtn-geisha"></button>
 
-<img id="sumo" src="img/sumo.png"/>
-<button id="upgradeBtn-sumo"></button>
+	<img id="maki" src="img/maki.png"/>
 
-<img id="ninja" src="img/ninja.png"/>
-<button id="upgradeBtn-ninja"></button>
+	<!-- Show resluts of upgrades -->
+			<ul>
+				<li><div id="showCounter"></div></li>
+				<li><div id="showUpgrade"></div></li>
+				<li><div id="showNekos"></div></li>
+				<li><div id="showGeishas"></div></li>
+				<li><div id="showSumos"></div></li>
+				<li><div id="showNinjas"></div></li>
+				<li><div id="showSamurais"></div></li>
+			</ul>
 
-<img id="samurai" src="img/samurai.png"/>
-<button id="upgradeBtn-samurai"></button>
 
-<!-- Div -->
+<section class="flexit">
+	<div class="">
+		<img id="neko" src="img/neko.png"/> <br>
+		<button id="upgradeBtn-neko"></button>
+	</div>
+	<div class="">
+		<img id="geisha" src="img/geisha.png"/><br>
+		<button id="upgradeBtn-geisha"></button>
+	</div>
+	<div class="">
+		<img id="sumo" src="img/sumo.png"/></br>
+		<button id="upgradeBtn-sumo"></button>
+	</div>
+	<div class="">
+		<img id="ninja" src="img/ninja.png"/><br>
+		<button id="upgradeBtn-ninja"></button>
+	</div>
+	<div class="">
+		<img id="samurai" src="img/samurai.png"/><br>
+		<button id="upgradeBtn-samurai"></button>
+	</div>
+</section>
 
-<div id="showCounter"></div>
-<div id="showUpgrade"></div>
-<div id="showNekos"></div>
-<div id="showGeishas"></div>
-<div id="showSumos"></div>
-<div id="showNinjas"></div>
-<div id="showSamurais"></div>
-	
-<script type="text/javascript" src="src/clicker.js"></script>
+
+
+</main>
+<!-- SCRIPTS -->
+
+	<!-- Custom JavaScript -->
+	<script type="text/javascript" src="src/clicker.js"></script>
 
 </body>
 </html>

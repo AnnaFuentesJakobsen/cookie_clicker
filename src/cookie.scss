@@ -2,7 +2,18 @@ body {
 	background-color: pink;
 }
 
+#maki {
+	width: 300px;
+	height: 200px;
+}
+
 img {
-	width: 250px;
-	height: 300px;
+	width: 100px;
+	height: 150px;
+}
+
+.flexit {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
