@@ -5,42 +5,42 @@ var multiple = 0;
 
 // Upgrade variables
 
-var grannysBought = 0;
-var farmsBought = 0;
-var minesBought = 0;
-var factorysBought = 0;
-var banksBought = 0;
+var nekosBought = 0;
+var geishasBought = 0;
+var sumosBought = 0;
+var ninjasBought = 0;
+var samuraisBought = 0;
 
 // Objects
 
-var granny = {
+var neko = {
 	cost: 10,
 	multiple: 2,
 	markup: 20
 };
 
-var farm = {
+var geisha = {
 	cost: 100,
 	multiple: 5,
 	markup: 40
 };
 
-var mine = {
+var sumo = {
 	cost: 300,
 	multiple: 15,
 	markup: 60
 };
 
-var factory = {
+var ninja = {
 	cost: 1000,
 	multiple: 20,
-	markup: 80
+	markup: 150
 };
 
-var bank = {
+var samurai = {
 	cost: 3000,
 	multiple: 40,
-	markup: 100
+	markup: 400
 };
 
 
@@ -48,76 +48,76 @@ var bank = {
 
 function render() {
 	printCookies();
-	printGranny();
-	printFarms();
-	printMines();
-	printFactorys();
-	printBanks();
+	printNeko();
+	printGeishas();
+	printSumos();
+	printNinjas();
+	printSamurais();
 
-	document.getElementById("upgradeBtn-granny").disabled = !canAfford(granny);
-	document.getElementById("upgradeBtn-farm").disabled = !canAfford(farm);
-	document.getElementById("upgradeBtn-mine").disabled = !canAfford(mine);
-	document.getElementById("upgradeBtn-factory").disabled = !canAfford(factory);
-	document.getElementById("upgradeBtn-bank").disabled = !canAfford(bank);
+	document.getElementById("upgradeBtn-neko").disabled = !canAfford(neko);
+	document.getElementById("upgradeBtn-geisha").disabled = !canAfford(geisha);
+	document.getElementById("upgradeBtn-sumo").disabled = !canAfford(sumo);
+	document.getElementById("upgradeBtn-ninja").disabled = !canAfford(ninja);
+	document.getElementById("upgradeBtn-samurai").disabled = !canAfford(samurai);
 
-	document.getElementById("upgradeBtn-granny").innerHTML = "Granny Cost: " + granny.cost;
-	document.getElementById("upgradeBtn-farm").innerHTML = "Farm Cost: " + farm.cost;
-	document.getElementById("upgradeBtn-mine").innerHTML = "Mine Cost: " + mine.cost;
-	document.getElementById("upgradeBtn-factory").innerHTML = "Factory Cost: " + factory.cost;
-	document.getElementById("upgradeBtn-bank").innerHTML = "Bank Cost: " + bank.cost;
+	document.getElementById("upgradeBtn-neko").innerHTML = "Neko Cost: " + neko.cost;
+	document.getElementById("upgradeBtn-geisha").innerHTML = "Geisha Cost: " + geisha.cost;
+	document.getElementById("upgradeBtn-sumo").innerHTML = "Sumo Cost: " + sumo.cost;
+	document.getElementById("upgradeBtn-ninja").innerHTML = "Ninja Cost: " + ninja.cost;
+	document.getElementById("upgradeBtn-samurai").innerHTML = "Samurai Cost: " + samurai.cost;
 
-	document.getElementById("showUpgrade").innerHTML = "Så här många kakor får man i sekunden: " + multiple;
+	document.getElementById("showUpgrade").innerHTML = "Så här många Maki får man i sekunden: " + multiple;
 
 }
 
 
 
 // Cookie clicks
-document.getElementById("myBtn").addEventListener("click", countClicks);
+document.getElementById("maki").addEventListener("click", countClicks);
 
 
 /* UPGRADES */
 
-// Grannys
-document.getElementById("upgradeBtn-granny").addEventListener("click", function(){
-	upgrade(granny);
+// Nekos
+document.getElementById("upgradeBtn-neko").addEventListener("click", function(){
+	upgrade(neko);
 });
 
-document.getElementById("upgradeBtn-granny").addEventListener("click", countGrannys);
-document.getElementById("upgradeBtn-granny").disabled = true;
+document.getElementById("upgradeBtn-neko").addEventListener("click", countNekos);
+document.getElementById("upgradeBtn-neko").disabled = true;
 
 
-// Farms
-document.getElementById("upgradeBtn-farm").addEventListener("click", function(){
-	upgrade(farm);
+// Geishas
+document.getElementById("upgradeBtn-geisha").addEventListener("click", function(){
+	upgrade(geisha);
 });
 
-document.getElementById("upgradeBtn-farm").addEventListener("click", countFarms);
-document.getElementById("upgradeBtn-farm").disabled = true;
+document.getElementById("upgradeBtn-geisha").addEventListener("click", countGeishas);
+document.getElementById("upgradeBtn-geisha").disabled = true;
 
-// Mines 
-document.getElementById("upgradeBtn-mine").addEventListener("click", function(){
-	upgrade(mine);
+// Sumos 
+document.getElementById("upgradeBtn-sumo").addEventListener("click", function(){
+	upgrade(sumo);
 });
 
-document.getElementById("upgradeBtn-mine").addEventListener("click", countMines);
-document.getElementById("upgradeBtn-mine").disabled = true;
+document.getElementById("upgradeBtn-sumo").addEventListener("click", countSumos);
+document.getElementById("upgradeBtn-sumo").disabled = true;
 
-// Factory
-document.getElementById("upgradeBtn-factory").addEventListener("click", function(){
-	upgrade(factory);
+// Ninja
+document.getElementById("upgradeBtn-ninja").addEventListener("click", function(){
+	upgrade(ninja);
 });
 
-document.getElementById("upgradeBtn-factory").addEventListener("click", countFactorys);
-document.getElementById("upgradeBtn-factory").disabled = true;
+document.getElementById("upgradeBtn-ninja").addEventListener("click", countNinjas);
+document.getElementById("upgradeBtn-ninja").disabled = true;
 
-// Bank
-document.getElementById("upgradeBtn-bank").addEventListener("click", function(){
-	upgrade(bank);
+// Samurai
+document.getElementById("upgradeBtn-samurai").addEventListener("click", function(){
+	upgrade(samurai);
 });
 
-document.getElementById("upgradeBtn-bank").addEventListener("click", countBanks);
-document.getElementById("upgradeBtn-bank").disabled = true;
+document.getElementById("upgradeBtn-samurai").addEventListener("click", countSamurais);
+document.getElementById("upgradeBtn-samurai").disabled = true;
 
 
 
@@ -128,24 +128,24 @@ function printCookies() {
 	document.getElementById("showCounter").innerHTML = "Du har nu: " + counter;
 }
 
-function printGranny() {
-	document.getElementById("showGranny").innerHTML = "Du har köpt: " + grannysBought + " Grannys!";
+function printNeko() {
+	document.getElementById("showNekos").innerHTML = "Du har köpt: " + nekosBought + " Nekos!";
 }
 
-function printFarms() {
-	document.getElementById("showFarms").innerHTML = "Du har köpt: " + farmsBought + " Farms!";
+function printGeishas() {
+	document.getElementById("showGeishas").innerHTML = "Du har köpt: " + geishasBought + " Geishas!";
 }
 
-function printMines() {
-	document.getElementById("showMines").innerHTML = "Du har köpt: " + minesBought + " Mines!";
+function printSumos() {
+	document.getElementById("showSumos").innerHTML = "Du har köpt: " + sumosBought + " Sumos!";
 }
 
-function printFactorys() {
-	document.getElementById("showFactorys").innerHTML = "Du har köpt: " + factorysBought + " Factorys!";
+function printNinjas() {
+	document.getElementById("showNinjas").innerHTML = "Du har köpt: " + ninjasBought + " Ninjas!";
 }
 
-function printBanks() {
-	document.getElementById("showBanks").innerHTML = "Du har köpt: " + banksBought + " Banks!";
+function printSamurais() {
+	document.getElementById("showSamurais").innerHTML = "Du har köpt: " + samuraisBought + " Samuraies!";
 }
 
 
@@ -172,29 +172,29 @@ function canAfford(item) {
 
 // Count upgrades
 
-function countGrannys() {
-	grannysBought++;
-	printGranny();
+function countNekos() {
+	nekosBought++;
+	printNeko();
 }
 
-function countFarms() {
-	farmsBought++;
-	printFarms();
+function countGeishas() {
+	geishasBought++;
+	printGeishas();
 }
 
-function countMines() {
-	minesBought++;
-	printMines();
+function countSumos() {
+	sumosBought++;
+	printSumos();
 }
 
-function countFactorys() {
-	factorysBought++;
-	printFactorys();
+function countNinjas() {
+	ninjasBought++;
+	printNinjas();
 }
 
-function countBanks() {
-	banksBought++;
-	printBanks();
+function countSamurais() {
+	samuraisBought++;
+	printSamurais();
 }
 
 
