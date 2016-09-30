@@ -3,14 +3,6 @@ body {
 	background-image: url("../../img/flag.png");
 	margin: 0;
 	height: 100%;
-
-}
-
-#maki {
-	width: 200px;
-	height: 200px;
-
-margin: 20px;
 }
 
 img {
@@ -20,10 +12,17 @@ img {
 	justify-content: center;
 }
 
-.flexit {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+ul {
+	background-color: rgba(117, 249, 234, 0.7);
+	width: 200px;	
+	border-radius: 6px;
+	border: 1px solid #1c726e;
+}
+
+ul li {
+	list-style-type: none;
+	padding: 5px;
+	color: #424141;
 }
 
 button {
@@ -35,13 +34,13 @@ button {
 	display:inline-block;
 	cursor:pointer;
 	color:#c92200;
-	//font-family:Arial;
 	font-size:10px;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ded17c;
 }
+
 button:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911));
 	background:-moz-linear-gradient(top, #f2ab1e 5%, #f0c911 100%);
@@ -52,33 +51,37 @@ button:hover {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911',GradientType=0);
 	background-color:#f2ab1e;
 }
+
 button:disabled {
-    background: #dddddd;
-    border: 1px solid #646568;
-    color: #646568;	
+  background: #dddddd;
+  border: 1px solid #646568;
+  color: #646568;	
 }
+
 button:active {
 	position:relative;
 	top:1px;
 }
+
+#maki {
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+}
+
+.flexit {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 100px;
+
+}
+
 .content {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	margin-bottom: 10px;
-}
-ul {
-	background-color: rgba(117, 249, 234, 0.7);
-	width: 200px;	
-	border-radius: 6px;
-	border: 1px solid #1c726e;
-}
-
-ul li{
-	list-style-type: none;
-	padding: 5px;
-	color: #424141;
-
+	margin-top: 30px;
 }
 
 
