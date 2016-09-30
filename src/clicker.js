@@ -66,7 +66,7 @@ function render() {
 	document.getElementById("upgradeBtn-ninja").innerHTML = "Ninja Cost: " + ninja.cost;
 	document.getElementById("upgradeBtn-samurai").innerHTML = "Samurai Cost: " + samurai.cost;
 
-	document.getElementById("showUpgrade").innerHTML = "Så här många Maki får man i sekunden: " + multiple;
+	document.getElementById("showUpgrade").innerHTML = "Maki/sec: " + multiple;
 
 }
 
@@ -125,27 +125,27 @@ document.getElementById("upgradeBtn-samurai").disabled = true;
 // PRINT, set innerHTML
 
 function printCookies() {
-	document.getElementById("showCounter").innerHTML = "Du har nu: " + counter;
+	document.getElementById("showCounter").innerHTML = "Maki: " + counter;
 }
 
 function printNeko() {
-	document.getElementById("showNekos").innerHTML = "Du har köpt: " + nekosBought + " Nekos!";
+	document.getElementById("showNekos").innerHTML = "Neko: " + nekosBought;
 }
 
 function printGeishas() {
-	document.getElementById("showGeishas").innerHTML = "Du har köpt: " + geishasBought + " Geishas!";
+	document.getElementById("showGeishas").innerHTML = "Geisha: " + geishasBought;
 }
 
 function printSumos() {
-	document.getElementById("showSumos").innerHTML = "Du har köpt: " + sumosBought + " Sumos!";
+	document.getElementById("showSumos").innerHTML = "Sumo: " + sumosBought;
 }
 
 function printNinjas() {
-	document.getElementById("showNinjas").innerHTML = "Du har köpt: " + ninjasBought + " Ninjas!";
+	document.getElementById("showNinjas").innerHTML = "Ninja: " + ninjasBought;
 }
 
 function printSamurais() {
-	document.getElementById("showSamurais").innerHTML = "Du har köpt: " + samuraisBought + " Samuraies!";
+	document.getElementById("showSamurais").innerHTML = "Samurai: " + samuraisBought;
 }
 
 

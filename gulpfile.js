@@ -19,14 +19,6 @@ gulp.task('js', function () {
         .pipe(gulp.dest('dist/js'))
 });
  
-/*gulp.task('sass:watch', function () {
-  gulp.watch('./src/*.scss', ['sass']);
-});
-
-gulp.task('js-watch', ['js'], function(done) {
-    browserSync.reload();
-    done();
-}) */
 gulp.task('default', ['sass', 'js'], function() {
     browserSync.init({
         server: "./",
