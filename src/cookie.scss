@@ -1,10 +1,13 @@
 body {
-	background-color: pink;
+	background-image: url("../../img/rising-flag.png");
+
 }
 
 #maki {
 	width: 300px;
 	height: 200px;
+
+margin: 20px;
 }
 
 img {
@@ -16,4 +19,8 @@ img {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+button {
+	background-color: pink;
 }

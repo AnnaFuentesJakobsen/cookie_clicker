@@ -1,7 +1,7 @@
 // Variabler
 
-var counter = 0;
-var multiple = 0;
+var counter = 0; // How many maki rolls player has in stock
+var multiple = 0; // How many maki rolls player gets per second
 
 // Upgrade variables
 
@@ -72,7 +72,7 @@ function render() {
 
 
 
-// Cookie clicks
+// Maki clicks
 document.getElementById("maki").addEventListener("click", countClicks);
 
 
@@ -197,14 +197,13 @@ function countSamurais() {
 	printSamurais();
 }
 
-
-// Automatisk counter
-
+// Initiate game-loop 
 setInterval(function() {
 	counter += multiple;
 	render();
 
 }, 1000)
 
+// Render once at starup
 render();
 

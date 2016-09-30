@@ -1,1 +1,1 @@
-body{background-color:pink}#maki{width:300px;height:200px}img{width:100px;height:150px}.flexit{display:flex;flex-direction:row;justify-content:space-around}
+body{background-image:url(../../img/rising-flag.png)}#maki{width:300px;height:200px;margin:20px}img{width:100px;height:150px}.flexit{display:flex;flex-direction:row;justify-content:space-around}button{background-color:pink}
