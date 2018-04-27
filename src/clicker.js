@@ -66,7 +66,7 @@ function render() {
 	document.getElementById("upgradeBtn-ninja").innerHTML = "Ninja Cost: " + ninja.cost;
 	document.getElementById("upgradeBtn-samurai").innerHTML = "Samurai Cost: " + samurai.cost;
 
-	document.getElementById("showUpgrade").innerHTML = "Maki/sec: " + multiple;
+	document.getElementById("showUpgrade").innerHTML = "Sushi/sec: " + multiple;
 
 }
 
@@ -125,7 +125,7 @@ document.getElementById("upgradeBtn-samurai").disabled = true;
 // PRINT, set innerHTML
 
 function printCookies() {
-	document.getElementById("showCounter").innerHTML = "Maki: " + counter;
+	document.getElementById("showCounter").innerHTML = "Sushi: " + counter;
 }
 
 function printNeko() {
@@ -151,6 +151,7 @@ function printSamurais() {
 
 
 function countClicks() {
+	maki.classList.add('maki-animation');
 	counter++;
 	render();
 }

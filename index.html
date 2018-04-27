@@ -7,50 +7,70 @@
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
 
 	<!-- Custom Style Sheet -->
-	<link rel="stylesheet" type="text/css" href="dist/css/cookie.css">
+	<link rel="stylesheet" type="text/css" href="src/cookie.css">
 </head>
 <body>
-<main>
-
-<div class="content">
-	<img id="maki" src="img/maki.png"/>
-	<ul> <!-- Show resluts of upgrades -->
-		<li><div id="showCounter"></div></li>
-		<li><div id="showUpgrade"></div></li>
-		<li><div id="showNekos"></div></li>
-		<li><div id="showGeishas"></div></li>
-		<li><div id="showSumos"></div></li>
-		<li><div id="showNinjas"></div></li>
-		<li><div id="showSamurais"></div></li>
-	</ul>
-</div>
-
-<section class="flexit">
-	<div class="container">
-		<img id="neko" src="img/neko.png"/> <br>
-		<button id="upgradeBtn-neko"></button>
+	<header>
+		<h1>Sushi Clicker Game!</h1>
+	</header>
+	<main>
+	<div class="grid">
+		<p>This is an incremental game and is inspired by the game Cookie Clicker. <br>Click on the big maki roll to get one maki per click. <br>Buy upgrades to improve the efficiency of clicks.</p>
+		<img id="maki" src="img/maki.png" style="cursor:pointer"/>
+		<div class="lists">
+			<ul class="counter"> <!-- Show resluts of upgrades -->
+				<li><div id="showCounter"></div></li>
+				<li><div id="showUpgrade"></div></li>
+			</ul>
+			<ul class="upgrade-list">
+				<li><div id="showNekos"></div></li>
+				<li><div id="showGeishas"></div></li>
+				<li><div id="showSumos"></div></li>
+				<li><div id="showNinjas"></div></li>
+				<li><div id="showSamurais"></div></li>
+			</ul>
+		</div>
 	</div>
-	<div class="container">
-		<img id="geisha" src="img/geisha.png"/><br>
-		<button id="upgradeBtn-geisha"></button>
+	<div class="upgrades">
+		<section class="grid">
+			<div>
+				<img id="neko" src="img/neko.png"/>
+			</div>
+			<div>
+				<img id="geisha" src="img/geisha.png"/>
+			</div>
+			<div>
+				<img id="sumo" src="img/sumo.png"/>
+			</div>
+			<div>
+				<img id="ninja" src="img/ninja.png"/>
+			</div>
+			<div>
+				<img id="samurai" src="img/samurai.png"/>
+			</div>
+		</section>
+		<section class="grid">
+			<div>
+				<button id="upgradeBtn-neko"></button>
+			</div>
+			<div>
+				<button id="upgradeBtn-geisha"></button>
+			</div>
+			<div>
+				<button id="upgradeBtn-sumo"></button>
+			</div>
+			<div>
+				<button id="upgradeBtn-ninja"></button>
+			</div>
+			<div>
+				<button id="upgradeBtn-samurai"></button>
+			</div>
+		</section>
 	</div>
-	<div class="container">
-		<img id="sumo" src="img/sumo.png"/></br>
-		<button id="upgradeBtn-sumo"></button>
-	</div>
-	<div class="container">
-		<img id="ninja" src="img/ninja.png"/><br>
-		<button id="upgradeBtn-ninja"></button>
-	</div>
-	<div class="container">
-		<img id="samurai" src="img/samurai.png"/><br>
-		<button id="upgradeBtn-samurai"></button>
-	</div>
-</section>
 
 </main>
 <!-- Custom JavaScript -->
-<script type="text/javascript" src="dist/js/clicker.js"></script>
+<script type="text/javascript" src="src/clicker.js"></script>
 
 </body>
 </html>
